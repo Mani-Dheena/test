@@ -1,0 +1,42 @@
+<html>
+    <body>
+        <h1> Hello {{ cname }} !</h1>
+        <p>
+            Your Details are as Follows ! Please confirm ! 
+        </p>
+       <center> <TABLE bgcolor="#eeddff"> 
+      
+        <TR><TD COLSPAN="2"> <h3> CANDIDATE DETAILS </h3></TD></TR>
+<!-- Indicates that form is sending data via POST method and it is submitted to dealprocess url  -->
+
+           <TR> <TD> Name</TD><TD>   {{ cname }} </TD></TR> 
+            
+           <TR> <TD>  Age </TD><TD>   {{ cage }} </TD></TR> 
+
+           <TR> <TD> Gender </TD>  {% if cgender  == "Male" %} 
+                                    <TD bgcolor="pink">  
+                                                   
+                                    <h2 >HE  {{ cgender }}</h2> </TD>
+
+                                            {%else %}  
+                                     <TD bgcolor="blue" > SHE {{ cgender }}</h1>  </TD>
+                                                    {% endif %}    
+                  </TR>  
+          
+           <TR> <TD> Qualification </TD>  <TD>  {{ cqual }} </TD> </TR> 
+
+           <TR> <TD> Hobbies </TD> <TD> {% for hob in chobby   %}
+                                        <ul> 
+                                            <li>{{ hob }}</li>
+                                        </ul> 
+                                        {% endfor %}
+                                        </TD> </TR> 
+           <TR> <TD> City </TD><TD> {{ ccity }}  </TD></TR> 
+           <TR> <TD> Mobile </TD><TD>  {{ cmobile }} </TD></TR> 
+           <TR> <TD> Mobile </TD><TD>  {{ cbrief }} </TD></TR> 
+          
+        <TR> <TD colspan="2"><center> <a href="candreg" > Register Another Candidate</a></TD></TR> 
+        </TABLE>
+    
+    </body>
+</html>

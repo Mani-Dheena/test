@@ -1,0 +1,43 @@
+<html>
+    <body>
+       <center> <TABLE bgcolor="#ffeedd"> 
+        <TR><TD COLSPAN="2"> <h3> CANDIDATE REGISTRATION </h3></TD></TR>
+<!-- Indicates that form is sending data via POST method and it is submitted to dealprocess url  -->
+        <FORM method="POST" action="canddisplay">
+    <!-- Prevents CSRF ---- Attack Cross Site Request Forgery Attack -->
+            {% csrf_token %}
+           <TR> <TD> Name</TD><TD>   <INPUT type="text" name="uname" /> </TD></TR> 
+            
+           <TR> <TD>  Age </TD><TD> <INPUT type="text" name="age" /> </TD></TR> 
+
+           <TR> <TD> Gender </TD>
+                    <TD>    <Input type="radio" name="gender" value="Male"> Male
+                            <Input type="radio" name="gender" value="Female"> Female
+                    </TD></TR> 
+          
+           <TR> <TD> Qualification </TD> 
+                <TD> <select name="qual"> 
+                        <option value="10"> 10th </option>
+                        <option value="12"> 12th </option>
+                        <option value="Graduate"> Graduate </option>
+                        <option value="Post Graduate"> Post Graduate</option> 
+                        <option value="Others"> Others</option> 
+                     </select> 
+                </TD>
+            </TR> 
+
+            <TR> <TD> Hobbies </TD> 
+                <TD> <input type="checkbox" value="Books" name="hobby">Books 
+                    <input type="checkbox" value="Sports" name="hobby">Sports 
+                    <input type="checkbox" value="Skying" name="hobby">Skying 
+                    <input type="checkbox" value="Music" name="hobby">Music 
+                </TD>
+            </TR> 
+           <TR> <TD> City </TD><TD>   <INPUT type="text" name="city" /> </TD></TR> 
+           <TR> <TD> Mobile </TD><TD>   <INPUT type="text" name="mobile" /> </TD></TR> 
+           <TR> <TD> Brief </TD><TD>   <textarea rows="4" name="brief"> </textarea> </TD></TR>  
+                <TR> <TD colspan="2"><center><Input type="submit" Value="REGISTER"/> </TD></TR> 
+        </TABLE>
+        </FORM> 
+    </body>
+</html>

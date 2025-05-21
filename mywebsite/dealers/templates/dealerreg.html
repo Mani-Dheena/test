@@ -1,0 +1,26 @@
+<html>
+    <body>
+       <center> <TABLE bgcolor="#ffeedd"> 
+
+        <TR><TD COLSPAN="2"> <h3> DEALER REGISTRATION </h3></TD></TR>
+<!-- Indicates that form is sending data via POST method and it is submitted to dealprocess url  -->
+        <FORM method="POST" action="dealprocess">
+            
+
+            <!-- Prevents CSRF ---- Attack Cross Site Request Forgery Attack -->
+            {% csrf_token %}
+
+           <TR> <TD> Name</TD><TD>   <INPUT type="text" name="uname" /> </TD></TR> 
+            
+           <TR> <TD>  Age </TD><TD> <INPUT type="text" name="age" /> </TD></TR> 
+
+           <TR> <TD> Gender </TD><TD>  <Input type="radio" name="gender" value="Male"> Male
+                         <Input type="radio" name="gender" value="Female"> Female
+                         </TD></TR> 
+            <TR> <TD> City </TD><TD>   <INPUT type="text" name="city" /> </TD></TR> 
+
+                <TR> <TD colspan="2"><center><Input type="submit" Value="REGISTER"/> </TD></TR> 
+        </TABLE>
+        </FORM> 
+    </body>
+</html>
